@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
+import "../App.css"
 
 function UserDetail({ activeUserId }) {
 
@@ -17,11 +18,11 @@ function UserDetail({ activeUserId }) {
         <div>
             <h2>Detaylar</h2>
             {
-                loading && <div>Yükleniyor</div>
+                loading && <div className="loader"></div>
             }
             {!loading &&
                 <pre>
-                    {JSON.stringify(user, null, 2)}
+                    {JSON.stringify(user, null, 4)}
                 </pre>}
         </div>
     )

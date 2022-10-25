@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import "../App.css"
 
 function UserList({ setActiveUserId }) {
 
@@ -16,7 +17,7 @@ function UserList({ setActiveUserId }) {
         <div>
             <h2>Kullanıcılar</h2>
             {
-                loading && <div>Yükleniyor</div>
+                loading && <div className="loader"></div>
             }
             <ul className="user-list">
                 {
